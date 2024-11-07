@@ -1,1 +1,12 @@
-
+Q: How to create a user?
+A: useradd <username>
+    Ex: useradd aws
+Q: How tp set a password to useraccount?
+A: passwd <useraccount>
+    Ex: passwd aws
+        Their password will be invisiable
+Q: How to create a group?
+A: groupadd <groupname>
+    Ex: groupadd devops
+Q; How to add existing user to group?
+A: 
