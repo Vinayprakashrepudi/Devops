@@ -26,6 +26,7 @@ A: directly in vim editior also we add the user to group
 
 Q: What happens when user forgot password?
 A: Only root user can change password or reset the password
+   Note: if user want to change if he is logedin, he change by "passwd" command
 
 Q; How root user can switch to other user account?
 A: su - <username>
