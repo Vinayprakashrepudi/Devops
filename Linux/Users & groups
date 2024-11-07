@@ -1,12 +1,53 @@
 Q: How to create a user?
 A: useradd <username>
     Ex: useradd aws
-Q: How tp set a password to useraccount?
+
+Q: How to set a password to useraccount?
 A: passwd <useraccount>
     Ex: passwd aws
-        Their password will be invisiable
+     Note: Their password will be invisiable
+
+Q: How to search for a user?
+A: grep <username> /etc/passwd
+        Ex: grep aws /etc/passwd
+    Note: "id aws" command will give you the info of the user
+
 Q: How to create a group?
 A: groupadd <groupname>
     Ex: groupadd devops
+
 Q; How to add existing user to group?
-A: 
+A: usermod -aG <group> <user>
+        Ex: usermod -aG devops aws
+    Note: you can search for group devops "grep devops /etc/group"
+or 
+A: directly in vim editior also we add the user to group 
+        Ex: "vim /etc/group" serach for the group and add by putting "," beside user.
+
+Q: What happens when user forgot password?
+A: Only root user can change password or reset the password
+
+Q; How root user can switch to other user account?
+A: su - <username>
+        Ex: su - aws
+Note: "root user can login to any user account without password"
+
+Q: How to delete the user or group?
+A: userdel <username>
+        Ex: userdel aws
+    Note: the above user will refeclt in home dir if you run "ls /home/"
+    To delete form home use "rm -rf /home/aws"
+
+OR
+A:  userdel -r <username>          and    groupdel -r <groupname>
+            Ex: userdel -r aws                 Ex: group -r devops
+
+1, Here "Last" command is used to check who has logined.
+
+Q:How to check opened file by user?
+A: lsof -u <username>
+        Ex: lsof -u aws
+        Note: if it is not installed, install "yum install lsof -y"
+
+
+
